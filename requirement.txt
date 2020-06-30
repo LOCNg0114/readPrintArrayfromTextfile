@@ -1,0 +1,15 @@
+- arr is a two-dimensional array 10x10, declared as int ** arr;
+- function void readArray(int** a):
++ init array a, data woule be read from input file, from a[0][0] to a[9][9]. Howerver, if a[i][j] is 0, all the data a[i][k] (j<k<10) would be init to 0, and the next number read from file would be a[i+1][0].
+- function void printArray(int** a)
++ print array row by row
+- function main create arr, call readArray() and then call printArray() to print data.
+
+Input description:
+- file input contain digit to init array. Noted that number of digit could more than the program need.
+
+Noted: Each element in a line is separated by a space, print "\n" at the end of the line and don't print unnecessary characters
+Explain:
+- the first seven number of row 0 is: 1 2 3 4 5 6 0. Because a[0][6] is 0, so 0 woule be assigned to a[0][7] to a[0][9], the next number from input is 15 would be assigned to next row.
+- the first two number of row 1 is: 15 0. Because a[1][1] is 0, so 0 woule be assigned to a[1][2] to a[1][9], the next number from input is 0 would be assigned to next row.
+- so on
